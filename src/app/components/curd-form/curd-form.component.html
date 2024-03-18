@@ -1,0 +1,17 @@
+<div class="container">
+  <h2 class="mt-5 mb-5">CURD Application with Local Storage</h2>
+  <div class="mb-5">
+    <div class="row">
+      <div class="form-group col-md-6 mb-3">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="user.name" placeholder="Enter Name" />
+      </div>
+      <!-- Similar input fields for email, age, and address -->
+    </div>
+    <div class="col-lg-12 mt-2">
+      <button class="btn btn-success" (click)="onSubmit()">
+        Add Data
+      </button>
+    </div>
+  </div>
+</div>

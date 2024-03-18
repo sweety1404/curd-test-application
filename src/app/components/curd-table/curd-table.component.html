@@ -1,0 +1,32 @@
+<div class="container">
+  <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by Name..." (keyup)="filterByName($event)">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.address }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(users.indexOf(user))">
+            Delete
+          </button>
+          <button class="btn btn-warning m-2">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
